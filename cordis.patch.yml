@@ -1,0 +1,6 @@
+# dsh-shot bundle layer: mount the host half (lib/index.js via the package root).
+# The browser half is resolved through `exports["./client"]` and served under
+# /plugins/dsh-shot/client.js; it is declared in package.json's dsh.client.
+- insert:
+    - id: dsh-shot
+      name: dsh-shot

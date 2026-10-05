@@ -1,0 +1,64 @@
+{
+  "name": "dsh-shot",
+  "version": "0.1.0",
+  "description": "Composer screenshot control for DeepSeek Harness: box-select and annotate a screen capture in an in-window overlay, optionally hiding the DSH window while capturing, then send the result as an image attachment.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "./lib/index.js",
+    "./lib/client.js",
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "README-zh.md",
+    "README-es.md",
+    "README-pt.md",
+    "README-hi.md",
+    "INSTALL.md",
+    "DESIGN.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis",
+    "screenshot",
+    "capture",
+    "annotate",
+    "region-select",
+    "composer"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19north/dsh-shot.git"
+  },
+  "homepage": "https://github.com/19north/dsh-shot#readme",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "os": [
+    "win32"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
