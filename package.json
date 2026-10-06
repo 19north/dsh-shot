@@ -1,6 +1,6 @@
 {
   "name": "dsh-shot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Composer screenshot control for DeepSeek Harness: box-select and annotate a screen capture in an in-window overlay, optionally hiding the DSH window while capturing, then send the result as an image attachment.",
   "type": "module",
   "main": "./lib/index.js",
