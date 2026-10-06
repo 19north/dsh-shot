@@ -83,9 +83,10 @@ The client half is declared in `package.json` under `dsh.client` and is served f
 
 - **Windows only.** The capture path is Win32 + DWM.
 - **The overlay covers the window**, not the screen. The whole capture is scaled to **fit**
-  and centred, and the leftover margin is a dark letterbox - so the entire screen stays visible
-  (nothing is cropped), at the cost of dark bands when the window's aspect ratio differs from the
-  screen's. On a 2560x1440 screen with a 1296x828 window that is about 50px top and bottom.
+  and centred, so nothing is cropped and the entire screen stays visible; the leftover margin is a
+  dark letterbox. On a 2560x1440 screen with a 1296x828 window that is about 50px top and bottom.
+  The scaling is recomputed from the window size every time the overlay opens, so a different
+  screen or window size needs no configuration.
 - **Multi-monitor** is captured as one virtual screen; it is all visible, but a small window
   shows it small.
 - The **hide** mode briefly makes the DSH window disappear (roughly 0.3–1.2 s).
